@@ -1,0 +1,22 @@
+div[class^="autocomplete-area"] ul.auto-area { border:none !important; border-top:1px solid #cccccc !important; }
+div[class^="autocomplete-area"] ul.auto-area li { position:relative; width:100%; height:20px; padding: 2px 15px 2px 15px !important; }
+div[class^="autocomplete-area"] ul.auto-area li:first-child { padding-top: 10px !important; }
+div[class^="autocomplete-area"] ul.auto-area li:last-child { padding-bottom: 10px !important; }
+.search_again_box .keyword-div { position:relative; display:inline-block; }
+
+/* 마이페이지 최근 본 상품 이미지 */
+.mypage_main .item_photo_box a > img{width:220px;}
+
+/* 일반 레이어팝업 (구매 이용 조건안내) */
+.pick_add_info .caution_msg1 {min-height:17px; margin:15px 0 0; padding: 0 0 0 19px; background:#fff url('../../img/icon/caution-1.png') no-repeat left 2px; color:#3e3d3c; line-height:20px; }
+.nomal_layer {position:absolute; top:0px; left:70px; z-index:10;  background:#ffffff; }
+.nomal_layer .wrap {position:relative; border:1px solid #555555; }
+.nomal_layer .wrap > strong {display:block; height:27px; padding:13px 0 0 17px; background:#f4f4f4; color:#222222; }
+.nomal_layer .wrap .list {overflow-x:hidden; overflow-y:auto; min-height:50px; max-height:210px;}
+.nomal_layer .wrap .list table {width:250px;}
+.nomal_layer .wrap .list table tr td.strong { font-weight:bold; text-align: left; border-left: none;}
+.nomal_layer .wrap .list table th {padding: 0 5px 0 3px ; border-bottom: 1px solid #e8e8e8; color: #444; font-size: 11px; text-align:left; }
+.nomal_layer .wrap .list table td {padding: 8px 0 8px 18px !important; color: #666; font-size: 11px; border-bottom: 1px solid #e8e8e8; height:15px !important; }
+.nomal_layer .wrap .close {display:block; position:absolute; top:11px; right:12px; width:18px; height:18px; text-indent:-9999px; background: url('../../img/btn/layer-close.png') no-repeat left top;}
+.normal_btn {display:inline-block; width:auto; padding:0 10px !important; border:1px solid #dbdbdb; color:#6c6c6c; text-align:center; vertical-align:top; box-sizing:border-box; cursor:pointer;}
+.normal_btn img {margin:0 0 0 5px; vertical-align:middle;}

@@ -4,9 +4,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shopping.web.BoardMapper">
     <select id="getBoardList" parameterType="com.shopping.web.board.form.BoardForm"
-            resultType="com.shopping.web.board.dto.BoardDto">
-        SELECT board_id, board_title, board_contents, board_date
+            resultType="com.shopping.web.board.form.BoardForm">
+        SELECT board_id, board_title, board_contents, board_date, member_nick
         FROM board
+        LEFT JOIN member on member.member_id = board.member_id
         ORDER BY board_id DESC
+
     </select>
+    <insert id="insertBoard" parameterType="com.shopping.web.board.dto.BoardDto">
+    INSERT INTO board (board_title, board_contents, member_id)
+    VALUES (#{board_title}, #{board_contents}, #{member_id})
+
+</insert>
+    <select id="getBoardDetails" parameterType="com.shopping.web.board.form.BoardForm"
+            resultType="com.shopping.web.board.form.BoardForm">
+    SELECT board_id, board_title, board_contents, board_date, member_nick
+    FROM board
+    LEFT JOIN member on member.member_id = board.member_id
+    WHERE board_id = #{board_id}
+</select>
+
 </mapper>

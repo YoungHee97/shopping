@@ -7,6 +7,7 @@
 <script type="text/javascript" src="/resources/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="/resources/js/wow.min.js"></script>
 <script type="text/javascript" src="/resources/js/custom.js"></script>
+<link rel="stylesheet" href="/resources/css/style.css">
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -18,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/resources/images/favicon.png">
 
-    <link rel="stylesheet" href="/resources/css/style.css">
+
 
 
     <!--[if lt IE 9]>
@@ -37,81 +38,6 @@
     </div>
 </div>
 
-
-<section class="header-top-section">
-    <div class="container">
-        <div class="row">
-            <div  class="col-md-6">
-                <div class="header-top-content">
-                    <ul class="nav nav-pills navbar-left">
-                        <li><a href="#"><i class="pe-7s-call"></i><span>123-123456789</span></a></li>
-                        <li><a href="#"><i class="pe-7s-mail"></i><span> info@mart.com</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div  class="col-md-6">
-                <div class="header-top-menu">
-                    <ul class="nav nav-pills navbar-right">
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Cart</a></li>
-                        <li><a href="#">Checkout</a></li>
-                        <li><a href="#"><i class="pe-7s-lock"></i>Login/Register</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<header class="header-section">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><b>M</b>art</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">page</a></li>
-                    <li><a href="#">shop</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right cart-menu">
-                    <li><a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><span> Cart -$0&nbsp;</span> <span class="shoping-cart">0</span></a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
-    </nav>
-</header>
-
-<section class="search-section">
-    <div class="container">
-        <div class="row subscribe-from">
-            <div class="col-md-12">
-                <form class="form-inline col-md-12 wow fadeInDown animated">
-                    <div class="form-group">
-                        <input type="email" class="form-control subscribe" id="email" placeholder="Search...">
-                        <button class="suscribe-btn" ><i class="pe-7s-search"></i></button>
-                    </div>
-                </form><!-- end /. form -->
-            </div>
-        </div><!-- end of/. row -->
-    </div><!-- end of /.container -->
-</section><!-- end of /.news letter section -->
-
 <section class="slider-section">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -126,25 +52,25 @@
             <div class="item active">
                 <img src="resources/images/slider.jpg" width="1648" height="600" alt="">
                 <div class="carousel-caption">
-                    <h2>DRESSES <b>&</b> JEANS</h2>
-                    <h3>FROM OURFAMOUS BRANDS <Span>SALE</Span></h3>
-                    <a href="#">Buy Now</a>
+                    <h2>예쁜 디자인 <b>&</b> 편리성 </h2>
+                    <h3>품질 좋은 옷<Span> 싸다!!!!</Span></h3>
+                    <a href="${pageContext.request.contextPath}/dress/dressList">지금 구매</a>
                 </div>
             </div>
             <div class="item">
-                <img src="/resources/images/slider.jpg" width="1648" height="600" alt="">
+                <img src="/resources/images/mv.jpg" width="1648" height="600" alt="">
                 <div class="carousel-caption">
                     <h2>DRESSES <b>&</b> JEANS</h2>
                     <h3>FROM OURFAMOUS BRANDS <Span>SALE</Span></h3>
-                    <a href="#">Buy Now</a>
+                    <a href="#">지금 구매</a>
                 </div>
             </div>
             <div class="item ">
-                <img src="/resources/images/slider.jpg" width="1648" height="600" alt="">
+                <img src="/resources/images/fruit.jpg" width="1648" height="600" alt="">
                 <div class="carousel-caption">
                     <h2>DRESSES <b>&</b> JEANS</h2>
                     <h3>FROM OURFAMOUS BRANDS <Span>SALE</Span></h3>
-                    <a href="#">Buy Now</a>
+                    <a href="#">지금 구매</a>
                 </div>
             </div>
         </div>
@@ -666,64 +592,6 @@
     </div><!-- end of /.container -->
 </section><!-- end of /.news letter section -->
 
-<section class="client-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="titie-section wow fadeInDown animated ">
-                    <h1>our partner</h1>
-                </div>
-            </div>
-        </div>
-        <div id="client" class="row owl-carousel owl-theme client-area">
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_01.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_02.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_03.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_04.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_01.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_02.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_03.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-            <div class="col-md-12 item">
-                <a href="#">
-                    <img src="/resources/images/client_04.jpg" class="img-responsive" width="300" height="200" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="customNavigation works-navigation">
-            <a class="btn-work works-prev"><i class="pe-7s-angle-left"></i></a>
-            <a class="btn-work works-next"><i class="pe-7s-angle-right"></i></a>
-        </div><!-- end of /.client navigation -->
-    </div>
-</section>
-
 <section class="news-section">
     <div class="container">
         <div class="row">
@@ -839,18 +707,6 @@
         </div>
     </div>
 </section>
-
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="center">Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-                </p>
-
-            </div>
-        </div>
-    </div>
-</footer>
 
 </body>
 </html>

@@ -18,5 +18,12 @@ public class BoardDao {
     public List<BoardDto> getBoardList(BoardForm boardForm) throws Exception {
         return sqlSession.selectList(NAMESPACE + ".getBoardList", boardForm);
     }
+
+    public void insertBoard(BoardDto boardDto) throws Exception {
+        sqlSession.insert(NAMESPACE + ".insertBoard", boardDto);
+    }
+    public BoardForm getBoardDetails(BoardForm boardForm) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + ".getBoardDetails", boardForm);
+    }
 }
 
