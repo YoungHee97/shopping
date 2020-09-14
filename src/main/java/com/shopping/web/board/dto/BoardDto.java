@@ -9,6 +9,12 @@ public class BoardDto {
     private String board_contents;
     private String board_date;
     private int member_id;
+    private String result;
+
+
+    public void setResult(String result) {
+        this.result = result;
+    }
 
     public void setBoard_id(int board_id) {
         this.board_id = board_id;
@@ -46,6 +52,10 @@ public class BoardDto {
 
     public int getMember_id(){
         return member_id;
+    }
+
+    public String getResult() {
+        return result;
     }
 }
 

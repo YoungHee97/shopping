@@ -22,8 +22,15 @@ public class BoardDao {
     public void insertBoard(BoardDto boardDto) throws Exception {
         sqlSession.insert(NAMESPACE + ".insertBoard", boardDto);
     }
+
     public BoardForm getBoardDetails(BoardForm boardForm) throws Exception {
         return sqlSession.selectOne(NAMESPACE + ".getBoardDetails", boardForm);
+    }
+
+    /** 게시판 - 삭제  */
+    public int deleteBoard(BoardForm boardForm) throws Exception {
+
+        return sqlSession.delete(NAMESPACE + ".deleteBoard", boardForm);
     }
 }
 

@@ -11,11 +11,13 @@
         ORDER BY board_id DESC
 
     </select>
+
     <insert id="insertBoard" parameterType="com.shopping.web.board.dto.BoardDto">
     INSERT INTO board (board_title, board_contents, member_id)
     VALUES (#{board_title}, #{board_contents}, #{member_id})
 
 </insert>
+
     <select id="getBoardDetails" parameterType="com.shopping.web.board.form.BoardForm"
             resultType="com.shopping.web.board.form.BoardForm">
     SELECT board_id, board_title, board_contents, board_date, member_nick
@@ -23,5 +25,11 @@
     LEFT JOIN member on member.member_id = board.member_id
     WHERE board_id = #{board_id}
 </select>
+
+    <delete id="deleteBoard" parameterType="com.shopping.web.board.dto.BoardDto">
+        DELETE
+        FROM board
+        WHERE board_id = #{board_id}
+    </delete>
 
 </mapper>

@@ -5,6 +5,7 @@ public class BoardForm {
     private String board_title;
     private String board_contents;
     private String board_date;
+    private String result;
 
     public void setBoard_id(int board_id) {
         this.board_id = board_id;
@@ -21,6 +22,9 @@ public class BoardForm {
     public void setBoard_date(String board_date) {
         this.board_date = board_date;
     }
+    public void setResult(String result) {
+        this.result = result;
+    }
 
     public int getBoard_id() {
         return board_id;
@@ -36,5 +40,9 @@ public class BoardForm {
 
     public String getBoard_date() {
         return board_date;
+    }
+
+    public String getResult() {
+        return result;
     }
 }

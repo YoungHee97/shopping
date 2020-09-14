@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <script type="text/javascript">
@@ -46,6 +47,51 @@
             $("#board_contents").text(boardContents);
         }
     }
+
+    /** 게시판 - 삭제  */
+    function deleteBoard(){
+
+        var boardId = $("#board_id").val();
+
+        var yn = confirm("게시글을 삭제하시겠습니까?");
+        if(yn){
+
+            $.ajax({
+                url     : "/board/deleteBoard",
+                data    : $("#board_id").serialize(),
+                dataType: "JSON",
+                cache   : false,
+                async   : true,
+                type    : "POST",
+
+                beforeSend : function(xhr) {
+                    xhr.setRequestHeader("${_csrf.headerName}", "${_csrf.token}");
+                },
+                success : function(obj) {
+                    deleteBoardCallback(obj);
+                },
+                error     : function(xhr, status, error) {}
+
+            });
+        }
+    }
+
+    /** 게시판 - 삭제 콜백 함수 */
+    function deleteBoardCallback(obj){
+
+        if(obj != null){
+
+            var result = obj.result;
+
+            if(result == "SUCCESS"){
+                alert("게시글 삭제를 성공하였습니다.");
+
+            } else {
+                alert("게시글 삭제를 실패하였습니다.");
+                return;
+            }
+        }
+    }
 </script>
 
 <div class="container">
@@ -72,6 +118,17 @@
             <div class="col-sm-10" id="board_contents">
             </div>
         </div>
+
+        <span class="btn-group col-md-offset-9">
+        <a href="/board/boardList" class="btn btn-default">목록</a>
+        <a href="" class="btn btn-default">수정</a>
+        <a href ="javascript:deleteBoard()" class="btn btn-default">삭제</a>
+    </span>
+
     </form>
+
+
+
+
 </div>
 

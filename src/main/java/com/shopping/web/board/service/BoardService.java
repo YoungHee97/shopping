@@ -6,6 +6,7 @@ import com.shopping.web.board.form.BoardForm;
 import com.shopping.web.member.dao.MemberDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -34,5 +35,19 @@ public class BoardService {
         return boardDao.getBoardDetails(boardForm);
     }
 
+    public BoardDto deleteBoard(BoardForm boardForm) throws Exception {
+
+        BoardDto boardDto = new BoardDto();
+
+        int deleteCnt = boardDao.deleteBoard(boardForm);
+
+        if (deleteCnt > 0) {
+            boardDto.setResult("SUCCESS");
+        } else {
+            boardDto.setResult("FAIL");
+        }
+
+        return boardDto;
+    }
 }
 

@@ -57,5 +57,14 @@ public class BoardController {
 
         return boardService.getBoardDetails(boardForm);
     }
+
+    @RequestMapping( value = "/deleteBoard")
+    @ResponseBody
+    public BoardDto deleteBoard(HttpServletRequest request, HttpServletResponse response, BoardForm boardForm) throws Exception{
+
+        BoardDto boardDto = boardService.deleteBoard(boardForm);
+
+        return boardDto;
+    }
 }
 
