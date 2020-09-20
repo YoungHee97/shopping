@@ -17,6 +17,10 @@
         getBoardDetails();
     });
 
+    function goBoardList(){
+        location.href = "/board/boardList";
+    }
+
     function getBoardDetails() {
         $.ajax({
             url: "/board/getBoardDetails",
@@ -78,11 +82,8 @@
 
     /** 게시판 - 삭제 콜백 함수 */
     function deleteBoardCallback(obj){
-
         if(obj != null){
-
             var result = obj.result;
-
             if(result == "SUCCESS"){
                 alert("게시글 삭제를 성공하였습니다.");
                 goBoardList();

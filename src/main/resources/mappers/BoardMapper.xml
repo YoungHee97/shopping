@@ -35,8 +35,8 @@
 
     <delete id="updateBoard" parameterType="com.shopping.web.board.dto.BoardDto">
         UPDATE board
-           SET board_title = #{board_title}
-             , board_contents = #{board_contents}
+           SET board_title = #{board_title},
+               board_contents = #{board_contents}
          WHERE board_id = #{board_id}
     </delete>
 

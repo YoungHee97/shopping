@@ -8,6 +8,7 @@ public class BoardForm {
     private String result;
     private String member_nick;
 
+
     public void setBoard_id(int board_id) {
         this.board_id = board_id;
     }
@@ -51,4 +52,5 @@ public class BoardForm {
     }
 
     public String getMember_nick() {return member_nick;}
+
 }

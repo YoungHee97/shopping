@@ -7,7 +7,10 @@ import com.shopping.web.member.dao.MemberDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Service
@@ -59,14 +62,9 @@ public class BoardService {
         boardDto.setBoard_title(boardForm.getBoard_title());
         boardDto.setBoard_contents(boardForm.getBoard_contents());
 
-        int deleteCnt = boardDao.updateBoard(boardForm);
-
-        if (deleteCnt > 0) {
-            boardDto.setResult("SUCCESS");
-        } else {
-            boardDto.setResult("FAIL");
-        }
+        boardDao.updateBoard(boardForm);
 
     }
+
 }
 
