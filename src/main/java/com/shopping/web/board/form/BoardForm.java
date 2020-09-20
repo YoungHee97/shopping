@@ -6,6 +6,7 @@ public class BoardForm {
     private String board_contents;
     private String board_date;
     private String result;
+    private String member_nick;
 
     public void setBoard_id(int board_id) {
         this.board_id = board_id;
@@ -22,6 +23,9 @@ public class BoardForm {
     public void setBoard_date(String board_date) {
         this.board_date = board_date;
     }
+
+    public void setMember_nick(String member_nick){this.member_nick = member_nick;}
+
     public void setResult(String result) {
         this.result = result;
     }
@@ -45,4 +49,6 @@ public class BoardForm {
     public String getResult() {
         return result;
     }
+
+    public String getMember_nick() {return member_nick;}
 }

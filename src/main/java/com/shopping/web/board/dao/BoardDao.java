@@ -32,5 +32,11 @@ public class BoardDao {
 
         return sqlSession.delete(NAMESPACE + ".deleteBoard", boardForm);
     }
+
+    /** 게시판 - 수정  */
+    public int updateBoard(BoardForm boardForm) throws Exception {
+
+        return sqlSession.update(NAMESPACE + ".updateBoard", boardForm);
+    }
 }
 

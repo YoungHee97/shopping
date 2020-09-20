@@ -44,7 +44,7 @@
             $("#member_nick").text(memberNick);
             $("#board_date").text(boardDate);
             $("#board_title").text(boardTitle);
-            $("#board_contents").text(boardContents);
+            $("#board_contents").html(boardContents);
         }
     }
 
@@ -85,13 +85,22 @@
 
             if(result == "SUCCESS"){
                 alert("게시글 삭제를 성공하였습니다.");
-
+                goBoardList();
             } else {
                 alert("게시글 삭제를 실패하였습니다.");
                 return;
             }
         }
     }
+
+    /** 게시판 - 수정 페이지 이동 */
+    function goBoardUpdate(){
+
+        var boardId = $("#board_id").val();
+
+        location.href = "/board/boardUpdate?boardId="+ boardId;
+    }
+    
 </script>
 
 <div class="container">
@@ -121,13 +130,11 @@
 
         <span class="btn-group col-md-offset-9">
         <a href="/board/boardList" class="btn btn-default">목록</a>
-        <a href="" class="btn btn-default">수정</a>
+        <a href="javascript: goBoardUpdate()" class="btn btn-default">수정</a>
         <a href ="javascript:deleteBoard()" class="btn btn-default">삭제</a>
     </span>
 
     </form>
-
-
 
 
 </div>

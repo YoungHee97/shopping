@@ -58,6 +58,7 @@ public class BoardController {
         return boardService.getBoardDetails(boardForm);
     }
 
+    /** 게시판 삭제 */
     @RequestMapping( value = "/deleteBoard")
     @ResponseBody
     public BoardDto deleteBoard(HttpServletRequest request, HttpServletResponse response, BoardForm boardForm) throws Exception{
@@ -65,6 +66,23 @@ public class BoardController {
         BoardDto boardDto = boardService.deleteBoard(boardForm);
 
         return boardDto;
+    }
+
+    /** 게시판 - 수정 페이지 이동 */
+    @RequestMapping( value = "/boardUpdate")
+    public String boardUpdate(HttpServletRequest request, HttpServletResponse response) throws Exception{
+
+        return "board/boardUpdate";
+    }
+
+    /** 게시판 - 수정 */
+    @RequestMapping( value = "/boardUpdate", method = RequestMethod.POST)
+    public String updateBoard(HttpServletRequest request, HttpServletResponse response, BoardForm boardForm, RedirectAttributes rttr) throws Exception{
+
+        boardService.updateBoard(boardForm);
+
+        rttr.addFlashAttribute("msg", "글이 수정되었습니다.");
+        return "redirect:/board/boardList";
     }
 }
 

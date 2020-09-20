@@ -35,6 +35,7 @@ public class BoardService {
         return boardDao.getBoardDetails(boardForm);
     }
 
+    /** 게시판 삭제*/
     public BoardDto deleteBoard(BoardForm boardForm) throws Exception {
 
         BoardDto boardDto = new BoardDto();
@@ -48,6 +49,24 @@ public class BoardService {
         }
 
         return boardDto;
+    }
+
+    /** 게시판 - 수정 */
+    public void updateBoard(BoardForm boardForm) throws Exception {
+
+        BoardDto boardDto = new BoardDto();
+
+        boardDto.setBoard_title(boardForm.getBoard_title());
+        boardDto.setBoard_contents(boardForm.getBoard_contents());
+
+        int deleteCnt = boardDao.updateBoard(boardForm);
+
+        if (deleteCnt > 0) {
+            boardDto.setResult("SUCCESS");
+        } else {
+            boardDto.setResult("FAIL");
+        }
+
     }
 }
 
