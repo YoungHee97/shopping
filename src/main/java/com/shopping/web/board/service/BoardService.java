@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.stream.events.Namespace;
 import java.util.List;
 
 @Service
@@ -35,6 +36,9 @@ public class BoardService {
     }
 
     public BoardForm getBoardDetails(BoardForm boardForm) throws Exception {
+
+        boardDao.updateBoardHits(boardForm);
+
         return boardDao.getBoardDetails(boardForm);
     }
 

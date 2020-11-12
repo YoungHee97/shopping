@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import javax.xml.stream.events.Namespace;
 import java.util.List;
 
 @Repository
@@ -37,6 +38,12 @@ public class BoardDao {
     public int updateBoard(BoardForm boardForm) throws Exception {
 
         return sqlSession.update(NAMESPACE + ".updateBoard", boardForm);
+    }
+
+    /** 게시판 조회수 - 수정 */
+    public int updateBoardHits(BoardForm boardForm) throws Exception{
+
+        return sqlSession.update(NAMESPACE+ ".updateBoardHits", boardForm);
     }
 }
 

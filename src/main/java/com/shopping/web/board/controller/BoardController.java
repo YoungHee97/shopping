@@ -84,5 +84,6 @@ public class BoardController {
         rttr.addFlashAttribute("msg", "글이 수정되었습니다.");
         return "redirect:/board/boardList";
     }
+
 }
 

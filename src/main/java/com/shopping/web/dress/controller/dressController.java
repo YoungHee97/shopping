@@ -37,4 +37,5 @@ public class dressController {
     public String getDpage(HttpServletRequest request, HttpServletResponse response) throws  Exception{
         return "/dress/good/d";
     }
-}
+
+   }

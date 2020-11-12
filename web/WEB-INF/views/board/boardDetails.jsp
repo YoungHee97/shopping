@@ -101,7 +101,7 @@
 
         location.href = "/board/boardUpdate?boardId="+ boardId;
     }
-    
+
 </script>
 
 <div class="container">

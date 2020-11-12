@@ -48,10 +48,13 @@
                 var boardTitle = obj[a].board_title;
                 var memberNick = obj[a].member_nick;
                 var boardDate = obj[a].board_date;
+                var boardHits = obj[a].board_hits;
+
                 str += "<tr>";
                 str += "<td>" + boardId + "</td>";
                 str += "<td>" + "<a href=\"/board/boardDetails?boardId=" + boardId + "\">" + boardTitle + "</a></td>";
                 str += "<td>" + memberNick + "</td>";
+                str += "<td>" + boardHits + "</td>";
                 str += "<td>" + boardDate + "</td>";
                 str += "</tr>";
             }
@@ -68,9 +71,10 @@
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <table id="boardForm-table" class="table table-striped">
             <colgroup>
-                <col width="20%"/>
+                <col width="10%"/>
                 <col width="40%"/>
                 <col width="20%"/>
+                <col width="10%"/>
                 <col width="20%"/>
             </colgroup>
             <thead id="thead">
@@ -78,6 +82,7 @@
                 <th>번호</th>
                 <th>제목</th>
                 <th>작성자</th>
+                <th>조회수</th>
                 <th>작성일</th>
             </tr>
             </thead>

@@ -6,7 +6,7 @@
 
     <select id="getBoardList" parameterType="com.shopping.web.board.form.BoardForm"
             resultType="com.shopping.web.board.form.BoardForm">
-        SELECT board_id, board_title, board_contents, board_date, member_nick
+        SELECT board_id, board_title, board_contents, board_date, member_nick, board_hits
         FROM board
         LEFT JOIN member on member.member_id = board.member_id
         ORDER BY board_id DESC
@@ -34,10 +34,16 @@
     </delete>
 
     <delete id="updateBoard" parameterType="com.shopping.web.board.dto.BoardDto">
-        UPDATE board
-           SET board_title = #{board_title},
-               board_contents = #{board_contents}
-         WHERE board_id = #{board_id}
+    UPDATE board
+       SET board_title = #{board_title},
+           board_contents = #{board_contents}
+    WHERE board_id = #{board_id}
+    </delete>
+
+    <delete id="updateBoardHits" parameterType="com.shopping.web.board.dto.BoardDto">
+    UPDATE board
+       SET board_hits = board_hits + 1
+    WHERE  board_id = #{board_id}
     </delete>
 
 </mapper>
