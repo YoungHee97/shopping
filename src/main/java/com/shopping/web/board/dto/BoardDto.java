@@ -65,4 +65,3 @@ public class BoardDto {
 
     public int getBoard_hits(){return board_hits;}
 }
-

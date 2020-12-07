@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <section class="search-section">
@@ -49,7 +48,6 @@
                 var memberNick = obj[a].member_nick;
                 var boardDate = obj[a].board_date;
                 var boardHits = obj[a].board_hits;
-
                 str += "<tr>";
                 str += "<td>" + boardId + "</td>";
                 str += "<td>" + "<a href=\"/board/boardDetails?boardId=" + boardId + "\">" + boardTitle + "</a></td>";
@@ -61,8 +59,6 @@
         }
         $("#tbody").html(str);
     }
-
-
 </script>
 
 
@@ -101,5 +97,3 @@
     </form>
 
 </div>
-
-

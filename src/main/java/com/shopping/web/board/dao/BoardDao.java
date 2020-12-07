@@ -46,4 +46,3 @@ public class BoardDao {
         return sqlSession.update(NAMESPACE+ ".updateBoardHits", boardForm);
     }
 }
-
