@@ -65,6 +65,7 @@
 <div class="container">
     <form id="boardForm" name="boardForm">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
         <table id="boardForm-table" class="table table-striped">
             <colgroup>
                 <col width="10%"/>

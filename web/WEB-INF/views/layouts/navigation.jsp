@@ -18,9 +18,10 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
                     <li><a href="${pageContext.request.contextPath}/dress/dressList">옷</a></li>
-                    <li><a href="#">화장품</a></li>
-                    <li><a href="#">과일</a></li>
                     <li><a href="${pageContext.request.contextPath}/board/boardList">고객센터</a></li>
+                    <li><a href="${pageContext.request.contextPath}/grid/index">grid</a></li>
+                    <li><a href="#">과일</a></li>
+
                     <li><a href="#">Contact Us</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right cart-menu">
