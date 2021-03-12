@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <script type="text/javascript">
@@ -11,16 +10,13 @@
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
-
     $(document).ready(function () {
         document.getElementById("board_id").value = getParameterByName("boardId");
         getBoardDetails();
     });
-
     function goBoardList(){
         location.href = "/board/boardList";
     }
-
     function getBoardDetails() {
         $.ajax({
             url: "/board/getBoardDetails",
@@ -36,7 +32,6 @@
             }
         });
     }
-
     function getBoardDetailsCallback(obj) {
         var str = "";
         if (obj != null) {
@@ -44,22 +39,17 @@
             var boardContents = obj.board_contents;
             var memberNick = obj.member_nick;
             var boardDate = obj.board_date;
-
             $("#member_nick").text(memberNick);
             $("#board_date").text(boardDate);
             $("#board_title").text(boardTitle);
             $("#board_contents").html(boardContents);
         }
     }
-
     /** 게시판 - 삭제  */
     function deleteBoard(){
-
         var boardId = $("#board_id").val();
-
         var yn = confirm("게시글을 삭제하시겠습니까?");
         if(yn){
-
             $.ajax({
                 url     : "/board/deleteBoard",
                 data    : $("#board_id").serialize(),
@@ -67,7 +57,6 @@
                 cache   : false,
                 async   : true,
                 type    : "POST",
-
                 beforeSend : function(xhr) {
                     xhr.setRequestHeader("${_csrf.headerName}", "${_csrf.token}");
                 },
@@ -75,11 +64,9 @@
                     deleteBoardCallback(obj);
                 },
                 error     : function(xhr, status, error) {}
-
             });
         }
     }
-
     /** 게시판 - 삭제 콜백 함수 */
     function deleteBoardCallback(obj){
         if(obj != null){
@@ -93,15 +80,11 @@
             }
         }
     }
-
     /** 게시판 - 수정 페이지 이동 */
     function goBoardUpdate(){
-
         var boardId = $("#board_id").val();
-
         location.href = "/board/boardUpdate?boardId="+ boardId;
     }
-
 </script>
 
 <div class="container">
@@ -136,7 +119,4 @@
     </span>
 
     </form>
-
-
 </div>
-

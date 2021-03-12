@@ -14,8 +14,8 @@
     </select>
 
     <insert id="insertBoard" parameterType="com.shopping.web.board.dto.BoardDto">
-    INSERT INTO board (board_title, board_contents, member_id)
-    VALUES (#{board_title}, #{board_contents}, #{member_id})
+    INSERT INTO board (board_title, board_contents, member_id, board_hits)
+    VALUES (#{board_title}, #{board_contents}, #{member_id}, #{board_hits})
 
 </insert>
 
